@@ -1,0 +1,8 @@
+prefix=/home/knuros5/catkin_ws/install
+
+Name: servo_node
+Description: Description of servo_node
+Version: 0.0.0
+Cflags: -I/home/knuros5/catkin_ws/install/include
+Libs: -L/home/knuros5/catkin_ws/install/lib -lservo_node
+Requires: roscpp std_msgs
