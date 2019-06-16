@@ -1,5 +1,5 @@
 /*
-* Title: feednwiggle.cpp
+* Title: feednplay.cpp
 * Contents: Subscribe flag to move servo motors.
 * Author: Minjeong Kang
 * Date: 2019/06/14
