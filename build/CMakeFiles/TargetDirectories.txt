@@ -65,6 +65,8 @@
 /home/knuros5/catkin_ws/build/servo_node/CMakeFiles/test.dir
 /home/knuros5/catkin_ws/build/servo_node/CMakeFiles/install/strip.dir
 /home/knuros5/catkin_ws/build/servo_node/CMakeFiles/install.dir
+/home/knuros5/catkin_ws/build/servo_node/CMakeFiles/listener.dir
+/home/knuros5/catkin_ws/build/servo_node/CMakeFiles/talker.dir
 /home/knuros5/catkin_ws/build/servo_node/CMakeFiles/feednplay.dir
 /home/knuros5/catkin_ws/build/servo_node/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/knuros5/catkin_ws/build/servo_node/CMakeFiles/roscpp_generate_messages_lisp.dir

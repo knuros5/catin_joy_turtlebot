@@ -20,7 +20,7 @@
 /* Macros */
 #define DEGREE(n) 15 + (n / 10)
 #define INTERVAL 400000
-#define SERVO_FEED 6
+#define SERVO_FEED 4
 #define SERVO_PLAY 5
 
 void servoCallback(const std_msgs::String::ConstPtr& msg);
@@ -49,13 +49,12 @@ int main(int argc, char **argv)
 
 void servoCallback(const std_msgs::String::ConstPtr& msg)
 {
-	//string mode = msg->data.c_str();
-	ROS_INFO("bkr msg: %s\n", msg->data.c_str());
-
 	if (!strcmp(msg->data.c_str(), "1")){	// mode 1: feeding
+		printf("[feednplay/servo] FEEDING.\n");
 		feed();	
 	}
-	else if(!strcmp(msg->data.c_str(), "2")){	// mode 2: wiggling
+	else if(!strcmp(msg->data.c_str(), "2")){	// mode 2: playing
+		printf("[feednplay/servo] PLAYING WITH FEATHER.\n");
 		playWithFeather();
 	}
 }
@@ -63,15 +62,19 @@ void servoCallback(const std_msgs::String::ConstPtr& msg)
 
 void feed()
 {
-	ROS_INFO("please feed.\n");
-	
+	softPwmCreate(SERVO_FEED, 0, 200);
+
+        while(1){
+                softPwmWrite(SERVO_FEED, DEGREE(90));
+                usleep(INTERVAL);
+                softPwmWrite(SERVO_FEED, DEGREE(-90));
+                usleep(INTERVAL*2);
+        }
 }
 
 
 void playWithFeather()
 {
-	ROS_INFO("## Playing with feather.\n");
-	
 	softPwmCreate(SERVO_PLAY, 0, 200);	
 	softPwmWrite(SERVO_PLAY, DEGREE(0));
 

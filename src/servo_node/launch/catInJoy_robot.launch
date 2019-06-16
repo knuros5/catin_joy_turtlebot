@@ -1,5 +1,0 @@
-<launch>
-	<node name="turtlebot3_robot" pkg="turtlebot3_bringup" type="turtlebot3_robot" output="screen"/>
-	<node name="feednplay" pkg="servo_node" type="feednplay" output="screen"/>
-	<node name="turtlebot3_rpicamera" pkg="turtlebot3_bringup" type="turtlebot3_rpicamera" output="screen"/>
-</launch>

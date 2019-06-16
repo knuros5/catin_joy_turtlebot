@@ -138,6 +138,8 @@ LINK_DIRECTORIES("/usr/lib")
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/servo_node_node.cpp)
 add_executable(feednplay src/feednplay.cpp)
+add_executable(listener src/listener.cpp)
+add_executable(talker src/talker.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -149,6 +151,8 @@ add_executable(feednplay src/feednplay.cpp)
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(feednplay servo_node_generate_messages_cpp)
+add_dependencies(listener servo_node_generate_messages_cpp)
+add_dependencies(talker servo_node_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
@@ -156,6 +160,8 @@ add_dependencies(feednplay servo_node_generate_messages_cpp)
 # )
 target_link_libraries(feednplay ${catkin_LIBRARIES})
 target_link_libraries(feednplay ${catkin_LIBRARIES} wiringPi)
+target_link_libraries(listener ${catkin_LIBRARIES})
+target_link_libraries(talker ${catkin_LIBRARIES})
 
 #############
 ## Install ##

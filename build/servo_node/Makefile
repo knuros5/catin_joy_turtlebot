@@ -166,6 +166,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+servo_node/CMakeFiles/listener.dir/rule:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 servo_node/CMakeFiles/listener.dir/rule
+.PHONY : servo_node/CMakeFiles/listener.dir/rule
+
+# Convenience name for target.
+listener: servo_node/CMakeFiles/listener.dir/rule
+
+.PHONY : listener
+
+# fast build rule for target.
+listener/fast:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/listener.dir/build.make servo_node/CMakeFiles/listener.dir/build
+.PHONY : listener/fast
+
+# Convenience name for target.
+servo_node/CMakeFiles/talker.dir/rule:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 servo_node/CMakeFiles/talker.dir/rule
+.PHONY : servo_node/CMakeFiles/talker.dir/rule
+
+# Convenience name for target.
+talker: servo_node/CMakeFiles/talker.dir/rule
+
+.PHONY : talker
+
+# fast build rule for target.
+talker/fast:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/talker.dir/build.make servo_node/CMakeFiles/talker.dir/build
+.PHONY : talker/fast
+
+# Convenience name for target.
 servo_node/CMakeFiles/feednplay.dir/rule:
 	cd /home/knuros5/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 servo_node/CMakeFiles/feednplay.dir/rule
 .PHONY : servo_node/CMakeFiles/feednplay.dir/rule
@@ -357,6 +387,60 @@ src/feednplay.cpp.s:
 	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/feednplay.dir/build.make servo_node/CMakeFiles/feednplay.dir/src/feednplay.cpp.s
 .PHONY : src/feednplay.cpp.s
 
+src/listener.o: src/listener.cpp.o
+
+.PHONY : src/listener.o
+
+# target to build an object file
+src/listener.cpp.o:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/listener.dir/build.make servo_node/CMakeFiles/listener.dir/src/listener.cpp.o
+.PHONY : src/listener.cpp.o
+
+src/listener.i: src/listener.cpp.i
+
+.PHONY : src/listener.i
+
+# target to preprocess a source file
+src/listener.cpp.i:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/listener.dir/build.make servo_node/CMakeFiles/listener.dir/src/listener.cpp.i
+.PHONY : src/listener.cpp.i
+
+src/listener.s: src/listener.cpp.s
+
+.PHONY : src/listener.s
+
+# target to generate assembly for a file
+src/listener.cpp.s:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/listener.dir/build.make servo_node/CMakeFiles/listener.dir/src/listener.cpp.s
+.PHONY : src/listener.cpp.s
+
+src/talker.o: src/talker.cpp.o
+
+.PHONY : src/talker.o
+
+# target to build an object file
+src/talker.cpp.o:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/talker.dir/build.make servo_node/CMakeFiles/talker.dir/src/talker.cpp.o
+.PHONY : src/talker.cpp.o
+
+src/talker.i: src/talker.cpp.i
+
+.PHONY : src/talker.i
+
+# target to preprocess a source file
+src/talker.cpp.i:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/talker.dir/build.make servo_node/CMakeFiles/talker.dir/src/talker.cpp.i
+.PHONY : src/talker.cpp.i
+
+src/talker.s: src/talker.cpp.s
+
+.PHONY : src/talker.s
+
+# target to generate assembly for a file
+src/talker.cpp.s:
+	cd /home/knuros5/catkin_ws/build && $(MAKE) -f servo_node/CMakeFiles/talker.dir/build.make servo_node/CMakeFiles/talker.dir/src/talker.cpp.s
+.PHONY : src/talker.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -366,6 +450,8 @@ help:
 	@echo "... test"
 	@echo "... install/strip"
 	@echo "... install"
+	@echo "... listener"
+	@echo "... talker"
 	@echo "... feednplay"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_lisp"
@@ -384,6 +470,12 @@ help:
 	@echo "... src/feednplay.o"
 	@echo "... src/feednplay.i"
 	@echo "... src/feednplay.s"
+	@echo "... src/listener.o"
+	@echo "... src/listener.i"
+	@echo "... src/listener.s"
+	@echo "... src/talker.o"
+	@echo "... src/talker.i"
+	@echo "... src/talker.s"
 .PHONY : help
 
 
