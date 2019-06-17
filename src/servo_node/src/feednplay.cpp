@@ -63,13 +63,12 @@ void servoCallback(const std_msgs::String::ConstPtr& msg)
 void feed()
 {
 	softPwmCreate(SERVO_FEED, 0, 200);
-
-        while(1){
-                softPwmWrite(SERVO_FEED, DEGREE(90));
-                usleep(INTERVAL);
-                softPwmWrite(SERVO_FEED, DEGREE(-90));
-                usleep(INTERVAL*2);
-        }
+	
+        softPwmWrite(SERVO_FEED, DEGREE(90));
+        usleep(INTERVAL);
+        softPwmWrite(SERVO_FEED, DEGREE(-90));
+        usleep(INTERVAL*2);
+        
 }
 
 
